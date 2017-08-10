@@ -1,0 +1,12 @@
+{
+  "name": "csvfmt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "./index.js",
+  "license": "MIT",
+  "dependencies": {
+    "command-line-args": "^4.0.7",
+    "fast-csv": "^2.4.0",
+    "gofmt": "^0.1.0"
+  }
+}
