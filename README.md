@@ -34,6 +34,22 @@ $ csvfmt --headers samples/people.csv
 {"name":"yarris","sex":"c","age":"200"}
 ```
 
+...which makes it quite handy with jq:
+
+```shell
+$ csvfmt samples/people.csv --headers | jq 'select(.age | tonumber  < 100)'
+{
+  "name": "morris",
+  "sex": "m",
+  "age": "12"
+}
+{
+  "name": "jenna",
+  "sex": "f",
+  "age": "13"
+}
+```
+
 --format lets you specify [sprintf](https://www.npmjs.com/package/sprintf-js) style formatting:
 
 ```shell
