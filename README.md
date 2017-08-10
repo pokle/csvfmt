@@ -5,7 +5,7 @@ A nicer command line csv tool than `cut -d , -f 1,2,3`
 ## Install
 
 This is a command line tool, so install it globally so it's available on your path:
-```
+```shell
 npm install --global csvfmt
 ```
 
