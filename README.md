@@ -11,14 +11,14 @@ npm install --global csvfmt
 
 ## Specifying files
 
-Provide files on the command line to parse:
+Provide files on the command line to parse. csvparse gives you a JSON representation of your CSV file (Useful with jq)
 
-```
+```shell
 $ csvfmt samples/people.csv
-[ 'name', 'sex', 'age' ]
-[ 'morris', 'm', '12' ]
-[ 'jenna', 'f', '13' ]
-[ 'yarris', 'c', '200' ]
+["name","sex","age"]
+["morris","m","12"]
+["jenna","f","13"]
+["yarris","c","200"]
 ```
 
 csvfmt reads CSV files from its standard input stream if no files are specified.
@@ -27,9 +27,27 @@ csvfmt reads CSV files from its standard input stream if no files are specified.
 
 --headers parses headers, and returns objects instead of arrays:
 
-```
+```shell
 $ csvfmt --headers samples/people.csv
-{ name: 'morris', sex: 'm', age: '12' }
-{ name: 'jenna', sex: 'f', age: '13' }
-{ name: 'yarris', sex: 'c', age: '200' }
+{"name":"morris","sex":"m","age":"12"}
+{"name":"jenna","sex":"f","age":"13"}
+{"name":"yarris","sex":"c","age":"200"}
+```
+
+--format lets you specify [sprintf](https://www.npmjs.com/package/sprintf-js) style formatting:
+
+```shell
+$ csvfmt samples/people.csv --headers --format '%(age)4d %(sex)s %(name)s'
+  12 m morris
+  13 f jenna
+ 200 c yarris
+ ```
+
+ You can also use positional indexes:
+ ```shell
+ csvfmt samples/people.csv --format '%2$s %1$s'
+sex name
+m morris
+f jenna
+c yarris
 ```

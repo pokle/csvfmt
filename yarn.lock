@@ -70,23 +70,12 @@ fast-csv@^2.4.0:
     object-extended "0.0.7"
     string-extended "0.0.8"
 
-filesize@^2.0.3:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/filesize/-/filesize-2.0.4.tgz#7805941c60fcdfe63f46d7ea358c59ade11c1325"
-
 find-replace@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/find-replace/-/find-replace-1.0.3.tgz#b88e7364d2d9c959559f388c66670d6130441fa0"
   dependencies:
     array-back "^1.0.4"
     test-value "^2.1.0"
-
-gofmt@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/gofmt/-/gofmt-0.1.0.tgz#cc663ec1ff1772b2435be18827b947f09d753ad5"
-  dependencies:
-    filesize "^2.0.3"
-    printable-string "^0.3.0"
 
 is-extended@0.0.10, is-extended@~0.0.3, is-extended@~0.0.8:
   version "0.0.10"
@@ -102,9 +91,9 @@ object-extended@0.0.7:
     extended "~0.0.3"
     is-extended "~0.0.3"
 
-printable-string@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/printable-string/-/printable-string-0.3.0.tgz#b552c412f401af08a8fdd2aa12fe7b3af33d6a67"
+sprintf-js@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.1.1.tgz#36be78320afe5801f6cea3ee78b6e5aab940ea0c"
 
 string-extended@0.0.8:
   version "0.0.8"
