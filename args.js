@@ -11,7 +11,10 @@ const options = commandLineArgs(optionDefinitions, { partial: true });
 
 if (options.help || options.version) {
   console.error('csvfmt', require(require('path').join(__dirname, 'package.json')).version)
-  console.error('Usage at: https://github.com/pokle/csvfmt')
+  // console.error('Usage at: https://github.com/pokle/csvfmt')
+  const fs = require('fs')
+  const path = require('path')
+  console.error(String(fs.readFileSync(path.join(__dirname, 'README.md'))));
   process.exit(0);
 }
 
