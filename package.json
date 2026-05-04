@@ -2,7 +2,9 @@
   "name": "csvfmt",
   "version": "1.0.7",
   "main": "index.js",
-  "bin": "./index.js",
+  "bin": {
+    "csvfmt": "index.js"
+  },
   "license": "MIT",
   "scripts": {
     "test": "./test.sh"
