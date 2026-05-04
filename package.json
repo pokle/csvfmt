@@ -1,12 +1,15 @@
 {
   "name": "csvfmt",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "bin": "./index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "./test.sh"
+  },
   "dependencies": {
-    "command-line-args": "^4.0.7",
-    "fast-csv": "^2.4.0",
-    "sprintf-js": "^1.1.1"
+    "command-line-args": "^6.0.2",
+    "fast-csv": "^5.0.5",
+    "sprintf-js": "^1.1.3"
   }
 }
